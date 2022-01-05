@@ -1,0 +1,14 @@
+export { default as heroBg } from "./SkincareBg.mp4";
+export { default as clean } from "./CLEAN.mp4";
+export { default as cruelty } from "./CRUELTY.mp4";
+export { default as skin } from "./SKINTYPES.mp4";
+export { default as logo } from "./logo.png";
+export { default as search } from "./Search.png";
+export { default as bag } from "./ShoppingBag.png";
+export { default as philosophy } from "./hands.jpg";
+export { default as vogue } from "./Vogue.png";
+export { default as elle } from "./Elle.png";
+export { default as cosmopolitan } from "./Cosmopolitan.png";
+export { default as people } from "./People.png";
+export { default as vanity } from "./Vanity.png";
+export { default as glamour } from "./Glamour.png";
