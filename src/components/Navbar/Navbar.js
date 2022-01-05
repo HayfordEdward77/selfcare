@@ -20,8 +20,8 @@ function Navbar() {
             <NavLink>
               <Icon src={search} />
             </NavLink>
-            <NavLink>SHOP</NavLink>
-            <NavLink>ABOUT</NavLink>
+            <NavLink to="/Shop">SHOP</NavLink>
+            <NavLink to="/About">ABOUT</NavLink>
           </NavItem>
 
           <MobileIcon onClick={handleClick}>
@@ -37,8 +37,8 @@ function Navbar() {
           </MobileSearchIcon>
 
           <NavItem>
-            <NavLink>MEMBERSHIP</NavLink>
-            <NavLink>LOGIN</NavLink>
+            <NavLink to="/Membership">MEMBERSHIP</NavLink>
+            <NavLink to="/Login">LOGIN</NavLink>
             <NavLink>
               <Icon src={bag} />
             </NavLink>
@@ -62,16 +62,16 @@ function Navbar() {
 
           <NavItemsWrapper>
             <MobileNavItem>
-              <NavLink>SHOP</NavLink>
+              <NavLink to="/Shop">SHOP</NavLink>
             </MobileNavItem>
             <MobileNavItem>
-              <NavLink>ABOUT</NavLink>
+              <NavLink to="/About">ABOUT</NavLink>
             </MobileNavItem>
             <MobileNavItem>
-              <NavLink>MEMBERSHIP</NavLink>
+              <NavLink to="/Membership">MEMBERSHIP</NavLink>
             </MobileNavItem>
             <MobileNavItem>
-              <NavLink>LOGIN</NavLink>
+              <NavLink to="/Login">LOGIN</NavLink>
             </MobileNavItem>
           </NavItemsWrapper>
         </MobileNavContainer>
