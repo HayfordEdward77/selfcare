@@ -91,20 +91,19 @@ function Philosophy() {
           </VideoItem>
         </VideosContainer>
       </VideosSection>
-      
     </>
   );
 }
 
 const PhilosophySection = styled.section`
   display: flex;
-  background-color: var(--light);
 `;
 const PhilosophyContainer = styled(Container)`
   display: flex;
   flex-wrap: wrap;
 `;
 const Column = styled.div`
+  background-color: var(--light);
   display: flex;
   flex-basis: 50%;
   max-width: 50%;
@@ -124,11 +123,19 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 960px) {
+    width: 600px;
+  }
 `;
 const Image = styled.img`
   width: 800px;
   position: relative;
   top: 40%;
+
+  @media and screen and (max-width: 769px) {
+    width: 600px;
+  }
 `;
 const TextWrapper = styled.div`
   display: flex;
@@ -138,6 +145,7 @@ const TextWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     margin-top: 36px;
+    padding: 0px 20px;
   }
 `;
 const Header = styled.h2`
