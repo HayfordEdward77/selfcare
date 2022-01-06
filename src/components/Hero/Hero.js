@@ -66,15 +66,16 @@ const Header = styled.h1`
   font-size: 64px;
   text-align: center;
   max-width: 600px;
+  font-family: "Voyage-regular", serif;
 
-  @media (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 40px;
   }
 `;
 const SubText = styled.p`
   margin-top: 24px;
   color: var(--light);
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
   font-weight: 100;
 

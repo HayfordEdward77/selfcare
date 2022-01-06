@@ -39,5 +39,13 @@ export const Button = styled.button`
   border: 1px solid var(--dark);
   background-color: ${({ background }) =>
     background ? "var(--warm)" : "var(--light)"};
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: ${({ background }) =>
+      background ? "var(--light)" : "var(--warm)"};
+  }
 `;
 export default GlobalStyle;

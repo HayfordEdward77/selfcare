@@ -1,0 +1,4 @@
+@font-face {
+  font-family: "Voyage-regular";
+  src: local("Voyage-regular"), url(./fonts/Voyage-Regular.woff) format("woff");
+}

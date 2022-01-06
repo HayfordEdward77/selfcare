@@ -95,6 +95,7 @@ const TWrapper = styled.div`
 const Title = styled.h2`
   color: var(--dark);
   font-size: 36px;
+  font-family: "Voyage-regular", serif;
   text-align: center;
   max-width: 600px;
 

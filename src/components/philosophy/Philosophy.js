@@ -152,6 +152,7 @@ const TextWrapper = styled.div`
 `;
 const Header = styled.h2`
   font-size: 48px;
+  font-family: "Voyage-regular", serif;
   color: var(--dark);
 
   @media screen and (max-width: 768px) {
@@ -244,6 +245,7 @@ const TWrapper = styled.div`
 `;
 const Title = styled.h2`
   color: var(--dark);
+  font-family: "Voyage-regular", serif;
   font-size: 36px;
 
   @media screen and (max-width: 768px) {
