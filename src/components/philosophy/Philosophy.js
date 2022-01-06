@@ -2,19 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 import {
-  clean,
   cosmopolitan,
-  cruelty,
   elle,
   glamour,
   people,
   philosophy,
-  skin,
   vanity,
   vogue,
 } from "../../media";
 
 function Philosophy() {
+  let vids = [
+    "https://res.cloudinary.com/starchypirate/video/upload/v1641431536/selfcare/CLEAN_d0dvrs.mp4",
+    "https://res.cloudinary.com/starchypirate/video/upload/v1641431745/selfcare/CRUELTY_bmobnb.mp4",
+    "https://res.cloudinary.com/starchypirate/video/upload/v1641431527/selfcare/SKINTYPES_kfdp8p.mp4",
+  ];
   return (
     <>
       <PhilosophySection>
@@ -64,7 +66,7 @@ function Philosophy() {
         <VideosContainer>
           <VideoItem>
             <VideoWrapper>
-              <Video autoPlay muted loop src={clean} />
+              <Video autoPlay muted loop src={vids[0]} />
             </VideoWrapper>
             <TWrapper>
               <Title>CLEAN</Title>
@@ -73,7 +75,7 @@ function Philosophy() {
           </VideoItem>
           <VideoItem>
             <VideoWrapper>
-              <Video autoPlay muted loop src={cruelty} />
+              <Video autoPlay muted loop src={vids[1]} />
             </VideoWrapper>
             <TWrapper>
               <Title>CRUELTY-</Title>
@@ -82,7 +84,7 @@ function Philosophy() {
           </VideoItem>
           <VideoItem>
             <VideoWrapper>
-              <Video autoPlay muted loop src={skin} />
+              <Video autoPlay muted loop src={vids[2]} />
             </VideoWrapper>
             <TWrapper>
               <Title>MADE</Title>

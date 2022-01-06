@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { Button, Container } from "../../globalStyles";
-import { heroBg } from "../../media";
 import Navbar from "../Navbar/Navbar";
 function Hero() {
   return (
     <>
       <HeaderSection>
         <HeaderContainer>
-          <VideoBg autoPlay loop muted src={heroBg} type="video/mp4" />
+          <VideoBg
+            autoPlay
+            loop
+            muted
+            src="https://res.cloudinary.com/starchypirate/video/upload/v1641431535/selfcare/SkincareBg_uyzcof.mp4"
+            type="video/mp4"
+          />
         </HeaderContainer>
         <HeaderContent>
           <Header>
