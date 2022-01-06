@@ -64,6 +64,8 @@ const HeaderContent = styled(Container)`
 const Header = styled.h1`
   color: var(--light);
   font-size: 64px;
+  font-weight: 400;
+  letter-spacing: 1px;
   text-align: center;
   max-width: 600px;
   font-family: "Voyage-regular", serif;

@@ -97,6 +97,8 @@ const Title = styled.h2`
   font-size: 36px;
   font-family: "Voyage-regular", serif;
   text-align: center;
+  letter-spacing: 1px;
+  font-weight: 400;
   max-width: 600px;
 
   @media screen and (max-width: 768px) {
