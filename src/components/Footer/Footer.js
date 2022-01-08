@@ -127,7 +127,7 @@ const FormWrapper = styled.div`
   @media screen and (max-width: 768px) {
     padding: 50px 50px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 280px) {
     padding: 50px 2px;
   }
 `;
