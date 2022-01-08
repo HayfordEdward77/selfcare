@@ -8,8 +8,45 @@ function Products() {
     <>
       <ProductsSection>
         <ProductsContainer>
+          <ProductItem type="text">
+            <TextWrapper>
+              <Header>THE CHERRY ON TOP?</Header>
+              <Description>
+                Made with ingredients that soothe the physical manifestations of
+                feelings.
+              </Description>
+              <Button>SHOP NOW</Button>
+            </TextWrapper>
+          </ProductItem>
+
           <ProductItem>
-            <TextWrapper></TextWrapper>
+            <ImageWrapper>
+              <Image src="https://res.cloudinary.com/starchypirate/image/upload/v1641516982/selfcare/WhatsApp_Image_2022-01-06_at_1.17.09_AM_nbspox.jpg" />
+            </ImageWrapper>
+            <Desc>
+              <Text>SELFCARE ESSENTIAL OIL</Text>
+              <ShopButton>SHOP NOW</ShopButton>
+            </Desc>
+          </ProductItem>
+
+          <ProductItem>
+            <ImageWrapper>
+              <Image src="https://res.cloudinary.com/starchypirate/image/upload/v1641516979/selfcare/WhatsApp_Image_2022-01-06_at_1.17.09_AM-2_fvppmw.jpg" />
+            </ImageWrapper>
+            <Desc>
+              <Text>SELFCARE MOISTURIZING OIL</Text>
+              <ShopButton>SHOP NOW</ShopButton>
+            </Desc>
+          </ProductItem>
+
+          <ProductItem>
+            <ImageWrapper>
+              <Image src="https://res.cloudinary.com/starchypirate/image/upload/v1641516982/selfcare/WhatsApp_Image_2022-01-06_at_1.17.10_AM_hpqqb3.jpg" />
+            </ImageWrapper>
+            <Desc>
+              <Text>SELFCARE CREAM</Text>
+              <ShopButton>SHOP NOW</ShopButton>
+            </Desc>
           </ProductItem>
         </ProductsContainer>
       </ProductsSection>
@@ -41,11 +78,112 @@ function Products() {
     </>
   );
 }
-const ProductsSection = styled.section``;
-const ProductsContainer = styled(Container)``;
-const ProductItem = styled.div``;
-const TextWrapper = styled.div``;
+const ProductsSection = styled.section`
+  display: flex;
+  height: 80vh;
+  padding: 24px 0px;
 
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+`;
+const ProductsContainer = styled(Container)`
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+const Desc = styled.div`
+  position: absolute;
+  background-color: var(--light);
+  display: flex;
+  width: 100%;
+  bottom: -20px;
+  opacity: 0;
+  border-top: 1px solid var(--dark);
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    bottom: 0px;
+    opacity: 1;
+  }
+`;
+const ProductItem = styled.div`
+  flex: 1;
+  border: 1px solid var(--dark);
+  display: flex;
+  position: relative;
+  padding: ${(props) => props.type === "text" && "12px"};
+  overflow: hidden;
+
+  &:hover ${Desc} {
+    bottom: 0px;
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+`;
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
+`;
+const Header = styled.h2`
+  font-family: "Voyage-regular", serif;
+  font-size: 48px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    text-align: center;
+  }
+`;
+const Description = styled.p`
+  font-weight: 100;
+  line-height: 2rem;
+  margin: 24px 0px;
+
+  @media screen and (max-width: 768px) {
+    line-height: 1.5rem;
+    font-size: 15px;
+    margin: 12px 0px;
+    text-align: center;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    height: 400px;
+  }
+`;
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+`;
+const Text = styled.h3`
+  font-size: 14px;
+  font-weight: 300;
+  padding: 12px 12px;
+`;
+const ShopButton = styled.button`
+  background-color: var(--dark);
+  outline: none;
+  border: none;
+  color: var(--light);
+  padding: 12px 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #393737;
+  }
+`;
 const ImagineSection = styled.section`
   display: flex;
   justify-content: center;
@@ -64,6 +202,8 @@ const Column = styled.div`
   @media screen and (max-width: 768px) {
     flex-basis: 100%;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
   }
 `;
 const ImgWrapper = styled.div`
@@ -72,14 +212,15 @@ const ImgWrapper = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    width: 400px;
+    width: 600px;
+    overflow: hidden;
   }
 `;
 const Img = styled.img`
   width: 750px;
 
   @media screen and (max-width: 768px) {
-    width: 350px;
+    width: 700px;
   }
 `;
 const TWrapper = styled.div`

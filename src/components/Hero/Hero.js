@@ -63,10 +63,10 @@ const HeaderContent = styled(Container)`
 `;
 const Header = styled.h1`
   color: var(--light);
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 400;
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   font-family: "Voyage-regular", serif;
 
   @media screen and (max-width: 768px) {

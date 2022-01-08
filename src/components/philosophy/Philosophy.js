@@ -32,7 +32,7 @@ function Philosophy() {
               <SubText>
                 Emotionally intelligent personal care, made to nurture your
                 emotional world and your physical self. Healing-centered and
-                science-driven, we’re here to support you inside and out.
+                science-driven, we're here to support you inside and out.
               </SubText>
             </TextWrapper>
           </Column>
@@ -73,7 +73,7 @@ function Philosophy() {
               <Description>and non toxic</Description>
             </TWrapper>
           </VideoItem>
-          <VideoItem>
+          {/* <VideoItem>
             <VideoWrapper>
               <Video autoPlay muted loop src={vids[1]} />
             </VideoWrapper>
@@ -81,7 +81,7 @@ function Philosophy() {
               <Title>CRUELTY-</Title>
               <Description>free</Description>
             </TWrapper>
-          </VideoItem>
+          </VideoItem> */}
           <VideoItem>
             <VideoWrapper>
               <Video autoPlay muted loop src={vids[2]} />
@@ -135,7 +135,7 @@ const Image = styled.img`
   position: relative;
   top: 40%;
 
-  @media and screen and (max-width: 769px) {
+  @media screen and (max-width: 769px) {
     width: 600px;
   }
 `;
@@ -182,7 +182,7 @@ const LogosSection = styled.section`
   border: 1px solid var(--dark);
 `;
 const LogosContainer = styled(Container)`
-  padding: 12px 20px;
+  padding: 6px 20px;
   justify-content: space-between;
   align-items: center;
 `;
@@ -207,7 +207,7 @@ const VideosSection = styled.section`
 `;
 const VideosContainer = styled(Container)`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;

@@ -82,7 +82,7 @@ function Navbar() {
 
 const Nav = styled.nav`
   background: var(--light);
-  height: 80px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,6 +99,7 @@ const NavbarContainer = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  align-items: center;
   padding: 0px 20px;
   display: flex;
   justify-content: space-between;
@@ -211,7 +212,6 @@ const MobileIcon = styled.div`
     display: block;
     top: 0;
     left: 0;
-    transform: translate(0%, 35%);
     cursor: pointer;
     font-size: 1.8rem;
   }
@@ -223,7 +223,6 @@ const MobileSearchIcon = styled.div`
     display: block;
     top: 0;
     right: 0;
-    transform: translate(0%, 35%);
     cursor: pointer;
     font-size: 1.8rem;
   }

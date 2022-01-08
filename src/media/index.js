@@ -17,3 +17,6 @@ export { default as fb } from "./facebook.png";
 export { default as ig } from "./Instagram.png";
 export { default as tik } from "./TikTok.png";
 export { default as arrow } from "./arrowRight.png";
+export { default as cream } from "./cream.jpeg";
+export { default as drops } from "./drops.jpeg";
+export { default as oil } from "./Oils.jpeg";
