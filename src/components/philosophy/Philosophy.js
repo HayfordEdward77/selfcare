@@ -66,7 +66,7 @@ function Philosophy() {
         <VideosContainer>
           <VideoItem>
             <VideoWrapper>
-              <Video autoPlay muted loop src={vids[0]} />
+              <Video autoPlay muted loop src={vids[0]} type="video/mp4" />
             </VideoWrapper>
             <TWrapper>
               <Title>CLEAN</Title>
@@ -84,7 +84,7 @@ function Philosophy() {
           </VideoItem> */}
           <VideoItem>
             <VideoWrapper>
-              <Video autoPlay muted loop src={vids[2]} />
+              <Video autoPlay muted loop src={vids[2]} type="video/mp4" />
             </VideoWrapper>
             <TWrapper>
               <Title>MADE</Title>
@@ -93,6 +93,43 @@ function Philosophy() {
           </VideoItem>
         </VideosContainer>
       </VideosSection>
+
+      <MarqueeSection>
+        <MarqueeContainer>
+          <MarqueeItem>&nbsp; NO FORMALDEHYDES</MarqueeItem>
+          <MarqueeItem>&nbsp; NO MICROPLASTICS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO HORMONE DISRUPTING INGREDIENTS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PARABENS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PHALATES</MarqueeItem>
+          <MarqueeItem>&nbsp; ALCOHOL FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO SULFATES</MarqueeItem>
+          <MarqueeItem>&nbsp; SILICONE FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO FORMALDEHYDES</MarqueeItem>
+          <MarqueeItem>&nbsp; NO MICROPLASTICS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO HORMONE DISRUPTING INGREDIENTS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PARABENS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PHALATES</MarqueeItem>
+          <MarqueeItem>&nbsp; ALCOHOL FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO SULFATES</MarqueeItem>
+          <MarqueeItem>&nbsp; SILICONE FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO FORMALDEHYDES</MarqueeItem>
+          <MarqueeItem>&nbsp; NO MICROPLASTICS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO HORMONE DISRUPTING INGREDIENTS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PARABENS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PHALATES</MarqueeItem>
+          <MarqueeItem>&nbsp; ALCOHOL FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO SULFATES</MarqueeItem>
+          <MarqueeItem>&nbsp; SILICONE FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO FORMALDEHYDES</MarqueeItem>
+          <MarqueeItem>&nbsp; NO MICROPLASTICS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO HORMONE DISRUPTING INGREDIENTS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PARABENS</MarqueeItem>
+          <MarqueeItem>&nbsp; NO PHALATES</MarqueeItem>
+          <MarqueeItem>&nbsp; ALCOHOL FREE</MarqueeItem>
+          <MarqueeItem>&nbsp; NO SULFATES</MarqueeItem>
+          <MarqueeItem>&nbsp; SILICONE FREE</MarqueeItem>
+        </MarqueeContainer>
+      </MarqueeSection>
     </>
   );
 }
@@ -274,5 +311,33 @@ const Description = styled.p`
   color: var(--dark);
   margin-top: 12px;
   font-weight: 100;
+`;
+
+const MarqueeSection = styled.section`
+  width: 100%;
+  overflow: hidden;
+  margin: 64px 0px;
+`;
+const MarqueeContainer = styled(Container)`
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  will-change: transform;
+  animation: animation-reel 220s infinite linear;
+
+  @keyframes animation-reel {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+`;
+const MarqueeItem = styled.div`
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0px 36px;
 `;
 export default Philosophy;

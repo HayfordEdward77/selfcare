@@ -11,7 +11,7 @@ function Hero() {
             autoPlay
             loop
             muted
-            src="https://res.cloudinary.com/starchypirate/video/upload/v1641431535/selfcare/SkincareBg_uyzcof.mp4"
+            src="https://res.cloudinary.com/starchypirate/video/upload/v1641680061/selfcare/SkincareBg_p8qzkj.mp4"
             type="video/mp4"
           />
         </HeaderContainer>
