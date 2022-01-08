@@ -111,6 +111,9 @@ const LogoWrapper = styled.div`
   @media screen and (max-width: 768px) {
     padding: 50px 50px;
   }
+  @media screen and (max-width: 280px) {
+    padding: 50px 2px;
+  }
 `;
 const Logo = styled.img`
   width: 100px;
@@ -124,6 +127,9 @@ const FormWrapper = styled.div`
   @media screen and (max-width: 768px) {
     padding: 50px 50px;
   }
+  @media screen and (max-width: 768px) {
+    padding: 50px 2px;
+  }
 `;
 const Text = styled.p`
   font-size: 14px;
@@ -133,6 +139,8 @@ const Form = styled.form`
   margin-top: 24px;
   border-bottom: 1px solid var(--dark);
   padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
 `;
 const Input = styled.input`
   outline: none;
@@ -167,6 +175,9 @@ const LinkWrapper = styled(Link)`
 
   @media screen and (max-width: 768px) {
     padding: 15px;
+  }
+  @media screen and (max-width: 280px) {
+    padding: 10px 3px;
   }
 `;
 const HyperLink = styled.p`

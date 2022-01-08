@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Button, Container } from "../../globalStyles";
-import { lady } from "../../media";
 
 function Products() {
   return (
@@ -15,7 +14,7 @@ function Products() {
                 Made with ingredients that soothe the physical manifestations of
                 feelings.
               </Description>
-              <Button>SHOP NOW</Button>
+              <Button>SHOP ALL</Button>
             </TextWrapper>
           </ProductItem>
 
@@ -55,7 +54,7 @@ function Products() {
         <ImagineContainer>
           <Column>
             <ImgWrapper>
-              <Img src={lady} />
+              <Img src="https://res.cloudinary.com/starchypirate/image/upload/v1641604949/selfcare/pexels-olha-ruskykh-6102176-2_mirsrq.jpg" />
             </ImgWrapper>
           </Column>
           <Column>
@@ -131,6 +130,7 @@ const TextWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     align-items: center;
+    justify-content: center;
   }
 `;
 const Header = styled.h2`
@@ -160,7 +160,7 @@ const ImageWrapper = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    height: 400px;
+    width: 400px;
   }
 `;
 const Image = styled.img`
@@ -209,15 +209,20 @@ const Column = styled.div`
 const ImgWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
-    width: 600px;
+    width: 500px;
+    height: 500px;
     overflow: hidden;
   }
 `;
 const Img = styled.img`
-  width: 750px;
+  width: 650px;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
     width: 700px;
@@ -230,7 +235,7 @@ const TWrapper = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 768px) {
-    margin-top: 24px;
+    margin-top: 36px;
   }
 `;
 const Title = styled.h2`

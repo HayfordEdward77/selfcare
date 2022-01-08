@@ -231,6 +231,14 @@ const VideoWrapper = styled.div`
     width: 350px;
     height: 290px;
   }
+
+  @media screen and (max-width: 320px) {
+    width: 300px;
+    height: 290px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 250px;
+  }
 `;
 const Video = styled.video`
   width: 400px;
@@ -238,6 +246,12 @@ const Video = styled.video`
 
   @media screen and (max-width: 768px) {
     width: 350px;
+  }
+  @media screen and (max-width: 320px) {
+    width: 300px;
+  }
+  @media screen and (max-width: 280px) {
+    width: 250px;
   }
 `;
 const TWrapper = styled.div`
