@@ -472,7 +472,6 @@ const ImgWrapper = styled.div`
 `;
 const Img = styled.img`
   width: 650px;
-  height: 990px;
   overflow: hidden;
 
   @media screen and (max-width: 768px) {
