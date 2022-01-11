@@ -1,17 +1,71 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "../../globalStyles";
-import {
-  cosmopolitan,
-  elle,
-  glamour,
-  people,
-  philosophy,
-  vanity,
-  vogue,
-} from "../../media";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Philosophy() {
+  let reveal = useRef(null);
+  let image = useRef(null);
+  let line = useRef(null);
+  let subtext = useRef(null);
+  let icon1 = useRef(null);
+  let icon2 = useRef(null);
+  let icon3 = useRef(null);
+  let icon4 = useRef(null);
+  let icon5 = useRef(null);
+  let icon6 = useRef(null);
+  let video1 = useRef(null);
+  let video2 = useRef(null);
+  let text1 = useRef(null);
+  let text2 = useRef(null);
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      ease: "power3.out",
+      trigger: reveal.current,
+      start: "800px",
+      toggleActions: "play",
+    },
+  });
+
+  useEffect(() => {
+    tl.to(reveal, {
+      duration: "2",
+      width: "0%",
+    }).from(image, 2, {
+      scale: 1.6,
+      delay: "-1.7",
+    });
+    tl.from(line, 1, {
+      delay: "-1.6",
+      y: 55,
+    })
+      .from(subtext, 1, {
+        delay: "-1",
+        y: 55,
+        opacity: "0",
+      })
+      .from([icon1, icon2, icon3, icon4, icon5, icon6], 1, {
+        delay: "-0.5",
+        opacity: "0",
+        stagger: {
+          amount: 0.3,
+        },
+      })
+      .from([video1, video2], 2, {
+        delay: "-1",
+        opacity: "0",
+        stagger: { amount: 0.6 },
+      })
+      .from([text1, text2], 1, {
+        delay: "-2",
+        opacity: "0",
+        stagger: { amount: 0.6 },
+      });
+  });
   let vids = [
     "https://res.cloudinary.com/starchypirate/video/upload/v1641431536/selfcare/CLEAN_d0dvrs.mp4",
     "https://res.cloudinary.com/starchypirate/video/upload/v1641431745/selfcare/CRUELTY_bmobnb.mp4",
@@ -23,13 +77,38 @@ function Philosophy() {
         <PhilosophyContainer>
           <Column>
             <ImageWrapper>
-              <Image src={philosophy} />
+              <ImageReveal
+                ref={(el) => {
+                  reveal = el;
+                }}
+              />
+              <Image
+                ref={(el) => {
+                  image = el;
+                }}
+                src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/hands_gel8is.webp"
+                alt="hands in contact"
+              />
             </ImageWrapper>
           </Column>
           <Column>
             <TextWrapper>
-              <Header>OUR PHILOSOPHY</Header>
-              <SubText>
+              <Header>
+                <LineWrap>
+                  <Line
+                    ref={(el) => {
+                      line = el;
+                    }}
+                  >
+                    OUR PHILOSOPHY
+                  </Line>
+                </LineWrap>
+              </Header>
+              <SubText
+                ref={(el) => {
+                  subtext = el;
+                }}
+              >
                 Emotionally intelligent personal care, made to nurture your
                 emotional world and your physical self. Healing-centered and
                 science-driven, we're here to support you inside and out.
@@ -41,23 +120,65 @@ function Philosophy() {
 
       <LogosSection>
         <LogosContainer>
-          <LogoItem>
-            <Logo src={vogue} />
+          <LogoItem
+            ref={(el) => {
+              icon5 = el;
+            }}
+          >
+            <Logo
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859759/selfcare/Vogue_hjdhsv.webp"
+              alt="Vogue logo"
+            />
           </LogoItem>
-          <LogoItem>
-            <Logo src={cosmopolitan} />
+          <LogoItem
+            ref={(el) => {
+              icon3 = el;
+            }}
+          >
+            <Logo
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859757/selfcare/Cosmopolitan_yzlszs.webp"
+              alt="Cosmopolitan logo"
+            />
           </LogoItem>
-          <LogoItem>
-            <Logo src={vanity} />
+          <LogoItem
+            ref={(el) => {
+              icon1 = el;
+            }}
+          >
+            <Logo
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859759/selfcare/Vanity_iojyc9.webp"
+              alt="Vanity logo"
+            />
           </LogoItem>
-          <LogoItem>
-            <Logo src={elle} />
+          <LogoItem
+            ref={(el) => {
+              icon2 = el;
+            }}
+          >
+            <Logo
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859757/selfcare/Elle_gjbcmj.webp"
+              alt="Elle logo"
+            />
           </LogoItem>
-          <LogoItem>
-            <Logo src={people} />
+          <LogoItem
+            ref={(el) => {
+              icon4 = el;
+            }}
+          >
+            <Logo
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/people_vaxzyq.webp"
+              alt="People logo"
+            />
           </LogoItem>
-          <LogoItem>
-            <Logo src={glamour} />
+          <LogoItem
+            ref={(el) => {
+              icon6 = el;
+            }}
+          >
+            <Logo
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859757/selfcare/Glamour_ubw5kh.webp"
+              alt="Glamour logo"
+            />
           </LogoItem>
         </LogosContainer>
       </LogosSection>
@@ -65,10 +186,18 @@ function Philosophy() {
       <VideosSection>
         <VideosContainer>
           <VideoItem>
-            <VideoWrapper>
+            <VideoWrapper
+              ref={(el) => {
+                video1 = el;
+              }}
+            >
               <Video autoPlay muted loop src={vids[0]} type="video/mp4" />
             </VideoWrapper>
-            <TWrapper>
+            <TWrapper
+              ref={(el) => {
+                text1 = el;
+              }}
+            >
               <Title>CLEAN</Title>
               <Description>and non toxic</Description>
             </TWrapper>
@@ -83,10 +212,18 @@ function Philosophy() {
             </TWrapper>
           </VideoItem> */}
           <VideoItem>
-            <VideoWrapper>
+            <VideoWrapper
+              ref={(el) => {
+                video2 = el;
+              }}
+            >
               <Video autoPlay muted loop src={vids[2]} type="video/mp4" />
             </VideoWrapper>
-            <TWrapper>
+            <TWrapper
+              ref={(el) => {
+                text2 = el;
+              }}
+            >
               <Title>MADE</Title>
               <Description>for all skin types</Description>
             </TWrapper>
@@ -157,6 +294,7 @@ const Column = styled.div`
 `;
 const ImageWrapper = styled.div`
   display: flex;
+  position: relative;
   width: 768px;
   height: 600px;
   overflow: hidden;
@@ -167,8 +305,20 @@ const ImageWrapper = styled.div`
     width: 600px;
   }
 `;
+
+const ImageReveal = styled.div`
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
+`;
 const Image = styled.img`
   width: 800px;
+  height: 1300px;
   position: relative;
   top: 40%;
 
@@ -193,6 +343,18 @@ const Header = styled.h2`
   color: var(--dark);
   letter-spacing: 1px;
   font-weight: 400;
+
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
+`;
+const LineWrap = styled.div`
+  overflow: hidden;
+  height: 50px;
+`;
+const Line = styled.div`
+  font-family: "Voyage-regular", serif;
+  font-size: 48px;
 
   @media screen and (max-width: 768px) {
     font-size: 36px;
@@ -231,6 +393,7 @@ const LogoItem = styled.div`
 `;
 const Logo = styled.img`
   width: 70px;
+  /* height: 20px; */
 
   @media screen and (max-width: 768px) {
     width: 40px;

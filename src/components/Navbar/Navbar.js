@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { logo, bag, search } from "../../media";
 import { Link } from "react-router-dom";
 import {
   IoMenuOutline,
@@ -17,8 +16,11 @@ function Navbar() {
       <Nav>
         <NavbarContainer>
           <NavItem>
-            <NavLink>
-              <Icon src={search} />
+            <NavLink to="/">
+              <Icon
+                src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/Search_jrehul.webp"
+                alt="search button"
+              />
             </NavLink>
             <NavLink to="/Shop">SHOP</NavLink>
             <NavLink to="/About">ABOUT</NavLink>
@@ -29,7 +31,10 @@ function Navbar() {
           </MobileIcon>
 
           <NavLogo to="/" onClick={closeMobileMenu}>
-            <Img src={logo} />
+            <Img
+              src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/logo_dwtrzz.webp"
+              alt="logo"
+            />
           </NavLogo>
 
           <MobileSearchIcon>
@@ -39,8 +44,11 @@ function Navbar() {
           <NavItem>
             <NavLink to="/Membership">MEMBERSHIP</NavLink>
             <NavLink to="/Login">LOGIN</NavLink>
-            <NavLink>
-              <Icon src={bag} />
+            <NavLink to="/">
+              <Icon
+                src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/ShoppingBag_gmbqk7.webp"
+                alt="shopping cart"
+              />
             </NavLink>
           </NavItem>
         </NavbarContainer>
@@ -53,10 +61,16 @@ function Navbar() {
               <IoCloseOutline onClick={handleClick} />
             </MobileCloseIcon>
             <NavLogo to="/" onClick={closeMobileMenu}>
-              <Img src={logo} />
+              <Img
+                src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/logo_dwtrzz.webp"
+                alt="logo"
+              />
             </NavLogo>
             <MobileSearchedIcon>
-              <Icon src={bag} />
+              <Icon
+                src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/ShoppingBag_gmbqk7.webp"
+                alt="Shopping cart"
+              />
             </MobileSearchedIcon>
           </NavHeaderWrapper>
 

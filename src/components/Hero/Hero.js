@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { Button, Container } from "../../globalStyles";
 import Navbar from "../Navbar/Navbar";
+import { gsap } from "gsap";
+
 function Hero() {
+  let line1 = useRef(null);
+  let line2 = useRef(null);
+  let line3 = useRef(null);
+
+  let subtext = useRef(null);
+  let button = useRef(null);
+
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    tl.from([line1, line2, line3], 2, {
+      delay: 1,
+      ease: "power3.out",
+      y: 88,
+      stagger: { amount: 0.4 },
+    }).from([subtext, button], 1, {
+      delay: "-1",
+      ease: "power.out",
+      opacity: "0",
+      y: 24,
+      stagger: { amount: 0.3 },
+    });
+  });
   return (
     <>
       <HeaderSection>
@@ -11,21 +36,56 @@ function Hero() {
             autoPlay
             loop
             muted
-            src="https://res.cloudinary.com/starchypirate/video/upload/v1641680061/selfcare/SkincareBg_p8qzkj.mp4"
+            src="https://res.cloudinary.com/starchypirate/video/upload/v1641824646/selfcare/SkincareBg_bqacg9.mp4"
             type="video/mp4"
           />
         </HeaderContainer>
         <HeaderContent>
           <Header>
-            Personal care products made with the whole you in mind.
+            <LineWrap>
+              <Line
+                ref={(el) => {
+                  line1 = el;
+                }}
+              >
+                Personal care products
+              </Line>
+            </LineWrap>
+            <LineWrap>
+              <Line
+                ref={(el) => {
+                  line2 = el;
+                }}
+              >
+                made with the whole you
+              </Line>
+            </LineWrap>
+            <LineWrap>
+              <Line
+                ref={(el) => {
+                  line3 = el;
+                }}
+              >
+                in mind.
+              </Line>
+            </LineWrap>
           </Header>
-          <SubText>Explore a more mindful routine</SubText>
-          <HeaderBtnWrap>
+          <SubText
+            ref={(el) => {
+              subtext = el;
+            }}
+          >
+            Explore a more mindful routine
+          </SubText>
+          <HeaderBtnWrap
+            ref={(el) => {
+              button = el;
+            }}
+          >
             <Button background>START NOW</Button>
           </HeaderBtnWrap>
         </HeaderContent>
       </HeaderSection>
-
       <Navbar />
     </>
   );
@@ -39,6 +99,7 @@ const HeaderSection = styled.section`
   z-index: 1;
   height: 100vh;
 `;
+
 const HeaderContainer = styled.div`
   position: absolute;
   top: 0;
@@ -66,13 +127,31 @@ const Header = styled.h1`
   font-size: 72px;
   font-weight: 400;
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   font-family: "Voyage-regular", serif;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
+    max-width: 400px;
   }
 `;
+const LineWrap = styled.div`
+  overflow: hidden;
+  height: 90px;
+
+  @media screen and (max-width: 768px) {
+    height: 50px;
+  }
+`;
+const Line = styled.div`
+  font-family: "Voyage-regular", serif;
+  font-size: 72px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 38px;
+  }
+`;
+
 const SubText = styled.p`
   margin-top: 24px;
   color: var(--light);

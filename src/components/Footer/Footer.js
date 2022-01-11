@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
-import { arrow, fb, ig, logo, tik } from "../../media";
 
 function Footer() {
   return (
@@ -11,7 +10,10 @@ function Footer() {
         <FooterContainer>
           <Column>
             <LogoWrapper>
-              <Logo src={logo} />
+              <Logo
+                src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/logo_dwtrzz.webp"
+                alt="logo"
+              />
             </LogoWrapper>
           </Column>
           <Column>
@@ -20,7 +22,10 @@ function Footer() {
               <Form>
                 <Input name="email" placeholder="ENTER EMAIL" />
                 <Submit>
-                  <Arrow src={arrow} />
+                  <Arrow
+                    src="https://res.cloudinary.com/starchypirate/image/upload/v1641859757/selfcare/arrowRight_fpkwqq.webp"
+                    alt="send button"
+                  />
                 </Submit>
               </Form>
             </FormWrapper>
@@ -61,13 +66,22 @@ function Footer() {
               </TextLinks>
               <SocialLinks>
                 <LinkWrapper>
-                  <Social src={fb} />
+                  <Social
+                    src="https://res.cloudinary.com/starchypirate/image/upload/v1641859757/selfcare/facebook_b2h2nu.webp"
+                    alt="facebook link"
+                  />
                 </LinkWrapper>
                 <LinkWrapper>
-                  <Social src={ig} />
+                  <Social
+                    src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/Instagram_giyb9y.webp"
+                    alt="Instagram link"
+                  />
                 </LinkWrapper>
                 <LinkWrapper>
-                  <Social src={tik} />
+                  <Social
+                    src="https://res.cloudinary.com/starchypirate/image/upload/v1641859758/selfcare/TikTok_fbhe00.webp"
+                    alt="tiktok link"
+                  />
                 </LinkWrapper>
               </SocialLinks>
             </LinksContainer>
