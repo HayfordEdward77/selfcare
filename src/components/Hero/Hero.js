@@ -15,12 +15,7 @@ function Hero() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    tl.from([line1, line2, line3], 2, {
-      delay: 1,
-      ease: "power3.out",
-      y: 88,
-      stagger: { amount: 0.4 },
-    }).from([subtext, button], 1, {
+    tl.from([line1, line2, line3], 2, {delay: 1,ease: "power3.out",y: 88,stagger: { amount: 0.4 },}).from([subtext, button], 1, {
       delay: "-1",
       ease: "power.out",
       opacity: "0",
